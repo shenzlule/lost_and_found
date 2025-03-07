@@ -91,12 +91,16 @@ public class UploadFragment extends Fragment {
     }
 
     public void refresh() {
-        // Clear the EditTexts and reset the ImageView
-        titleInput.setText("");
-        descriptionInput.setText("");
-        itemImage.setImageURI(null); // Clear the selected image
-        isLostCheckBox.setChecked(false);
-        contactInput.setText("");
+
+
+        if(titleInput != null && descriptionInput != null && itemImage!=null&& isLostCheckBox!=null & contactInput!=null) {
+            // Clear the EditTexts and reset the ImageView
+            titleInput.setText("");
+            descriptionInput.setText("");
+            itemImage.setImageURI(null); // Clear the selected image
+            isLostCheckBox.setChecked(false);
+            contactInput.setText("");
+        }
 
     }
 

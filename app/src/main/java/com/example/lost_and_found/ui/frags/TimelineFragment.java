@@ -143,6 +143,8 @@ public class TimelineFragment extends Fragment {
         loadItems();  // Reload the items when refreshing the fragment
     }
 
+
+
     private void loadItems() {
 
         if (itemDao == null) {
@@ -153,24 +155,20 @@ public class TimelineFragment extends Fragment {
             @Override
             public void run() {
                 // Query the Room database for all items
-                List<Item> itemsFromDb = itemDao.getAllItems();
 
-                // Update the UI on the main thread
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
+                if (itemDao != null) {
+                    List<Item> itemsFromDb = itemDao.getAllItems();
+
+                    if(getActivity() != null){
+                    getActivity().runOnUiThread(() -> {
                         itemList.clear();
-                        itemList.addAll(itemsFromDb);  // Add the items from the database
-                        adapter.notifyDataSetChanged();  // Notify the adapter to update the UI
-                        if (itemList.isEmpty()){
+                        itemList.addAll(itemsFromDb);
+                        adapter.notifyDataSetChanged();
+                        noItem.setVisibility(itemList.isEmpty() ? VISIBLE : GONE);
+                    });}
+                }
 
-                            noItem.setVisibility(VISIBLE);
-                        }else {
 
-                            noItem.setVisibility(GONE);
-                        }
-                    }
-                });
             }
         }).start();
     }

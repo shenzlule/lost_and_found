@@ -106,6 +106,8 @@ public class GoogleSignInActivity extends AppCompatActivity {
                     firebaseAuthWithGoogle(account.getIdToken());
                 }
             } catch (ApiException e) {
+                progressBar.setVisibility(View.GONE); // Hide progress bar
+
                 Log.w("GoogleSignIn", "Sign in failed", e);
                 Toast.makeText(this, "Google Sign-In Failed", Toast.LENGTH_SHORT).show();
             }

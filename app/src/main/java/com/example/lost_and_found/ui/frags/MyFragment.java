@@ -141,13 +141,15 @@ public class MyFragment extends Fragment {
             // Check if `itemDao` is still null before querying
             if (itemDao != null) {
                 List<Item> itemsFromDb = itemDao.getItemsByUserId(userEmail);
+                if(getActivity() != null) {
 
-                getActivity().runOnUiThread(() -> {
-                    myItems.clear();
-                    myItems.addAll(itemsFromDb);
-                    adapter.notifyDataSetChanged();
-                    noItem.setVisibility(myItems.isEmpty() ? VISIBLE : GONE);
-                });
+                    getActivity().runOnUiThread(() -> {
+                        myItems.clear();
+                        myItems.addAll(itemsFromDb);
+                        adapter.notifyDataSetChanged();
+                        noItem.setVisibility(myItems.isEmpty() ? VISIBLE : GONE);
+                    });
+                }
             }
         }).start();
     }
