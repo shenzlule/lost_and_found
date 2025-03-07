@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "122903763660",
+    "project_id": "lost-and-found-cf747",
+    "storage_bucket": "lost-and-found-cf747.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122903763660:android:1a49490845ac4aa894c069",
+        "android_client_info": {
+          "package_name": "com.example.lost_and_found"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122903763660-29mvhtr0uhpgr9hlr9o1nohjiq6vt4ud.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lost_and_found",
+            "certificate_hash": "81951e1eea94d07697699901eacefec5f4e273ac"
+          }
+        },
+        {
+          "client_id": "122903763660-mecsi40nt4ojf6lt75jlodhdq9ja0r7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChDwoAyR1z5QQ_3_4iQMBghFRPIyvA8UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122903763660-mecsi40nt4ojf6lt75jlodhdq9ja0r7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

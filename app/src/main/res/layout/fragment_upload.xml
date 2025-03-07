@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/titleInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_item_title"/>
+
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_item_description"
+        android:layout_marginTop="8dp"/>
+    <!-- New Contact Field -->
+    <EditText
+        android:id="@+id/contactInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter contact information"
+        android:inputType="phone"
+        android:layout_marginTop="8dp"/>
+
+    <!-- New CheckBox for isLost -->
+    <CheckBox
+        android:id="@+id/isLostCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is Lost?"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#3652ED"
+        android:textSize="12sp"
+        android:text="@string/select_image"
+        android:layout_marginTop="8dp"/>
+
+
+
+
+    <Button
+        android:id="@+id/uploadButton"
+        android:layout_width="match_parent"
+        android:textSize="12sp"
+        android:textColor="#3652ED"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_item"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

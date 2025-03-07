@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/app_icon_"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="App Logo"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zuula - Lost &amp; Found"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- App Version -->
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version 1.0.0"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:paddingBottom="8dp"/>
+
+        <!-- About the App -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zuula is an app designed to help users report and find lost items. Users can post lost or found items with descriptions, images, and contact details."
+            android:textSize="14sp"
+            android:paddingBottom="12dp"/>
+
+        <!-- Privacy Policy -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy: Your data is securely stored and only used for lost and found purposes. No personal data is shared with third parties."
+            android:textSize="14sp"
+            android:paddingBottom="12dp"/>
+
+        <!-- Terms and Conditions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By using Zuula, you agree to our terms of service, ensuring responsible use and accuracy of provided information."
+            android:textSize="14sp"
+            android:paddingBottom="12dp"/>
+
+        <!-- Contact Support -->
+        <Button
+            android:id="@+id/contactSupportButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Support"
+            android:textColor="@android:color/white"
+            android:background="@color/purple_500"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+</ScrollView>
