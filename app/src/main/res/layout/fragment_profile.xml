@@ -33,7 +33,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Full Name"
-        android:textSize="20sp"
+        android:textColor="#580123"
+        android:textSize="21sp"
         android:textStyle="bold"
         android:layout_marginBottom="8dp"/>
 
@@ -44,11 +45,12 @@
         android:layout_height="wrap_content"
         android:text="user@example.com"
         android:textSize="16sp"
+        android:textColor="#AC768A"
         android:layout_marginBottom="16dp"/>
 
     <!-- Logout Button -->
     <Button
-        android:background="@drawable/gradient_background"
+        android:background="#923E5D"
         android:id="@+id/btn_logout"
         android:textColor="@color/white"
         android:textSize="12sp"

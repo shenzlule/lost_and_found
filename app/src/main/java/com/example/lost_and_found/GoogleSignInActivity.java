@@ -31,6 +31,8 @@ public class GoogleSignInActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
 
+    private View dimOverlay;
+
     private ProgressBar progressBar;
 
     private Button signInButton;
@@ -43,6 +45,8 @@ public class GoogleSignInActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         signInButton = findViewById(R.id.signInButton);
 
+        dimOverlay = findViewById(R.id.dimOverlay);
+
         progressBar = findViewById(R.id.progressBar);
 
         ImageView appIcon = findViewById(R.id.app_icon);
@@ -50,11 +54,11 @@ public class GoogleSignInActivity extends AppCompatActivity {
         Button signInButton = findViewById(R.id.signInButton);
 
         // Load app icon with Glide
-        Glide.with(this)
-                .load(R.drawable.icon) // Replace with your actual app icon
-                .placeholder(R.drawable.icon) // Default image
-                .circleCrop() // Ensures the image is circular
-                .into(appIcon);
+//        Glide.with(this)
+//                .load(R.drawable.icon) // Replace with your actual app icon
+//                .placeholder(R.drawable.icon) // Default image
+//                .circleCrop() // Ensures the image is circular
+//                .into(appIcon);
 
 
         // Create the wiggle animation
@@ -77,7 +81,6 @@ public class GoogleSignInActivity extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         signInButton.setOnClickListener(v -> signInWithGoogle());
-
         // Check if user is already signed in
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
@@ -86,6 +89,9 @@ public class GoogleSignInActivity extends AppCompatActivity {
     }
 
     private void signInWithGoogle() {
+        dimOverlay.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
+
         mGoogleSignInClient.signOut().addOnCompleteListener(this, task -> {
             progressBar.setVisibility(View.VISIBLE); // Hide progress bar
             Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -104,9 +110,14 @@ public class GoogleSignInActivity extends AppCompatActivity {
 
                 if (account != null) {
                     firebaseAuthWithGoogle(account.getIdToken());
+                    dimOverlay.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.GONE);
+
                 }
             } catch (ApiException e) {
                 progressBar.setVisibility(View.GONE); // Hide progress bar
+                dimOverlay.setVisibility(View.GONE);
+                progressBar.setVisibility(View.GONE);
 
                 Log.w("GoogleSignIn", "Sign in failed", e);
                 Toast.makeText(this, "Google Sign-In Failed", Toast.LENGTH_SHORT).show();

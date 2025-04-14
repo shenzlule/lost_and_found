@@ -2,13 +2,16 @@ package com.example.lost_and_found;
 
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -50,6 +53,14 @@ public class MainTabs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs_main);
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color));
+            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.nav_bar_color));
+        }
 
 
 

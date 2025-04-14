@@ -129,16 +129,22 @@ public class ItemMyAdapter extends RecyclerView.Adapter<ItemMyAdapter.ItemViewHo
 
 
     private void showDeleteDialog(Item item, int position) {
-        new AlertDialog.Builder(context)
-                .setTitle("Delete Item")
-                .setMessage("Are you sure you want to delete this item?")
-                .setPositiveButton("Delete", (dialog, which) -> {
-                    deleteItem(item,position);  // Delete item from the database
-                    itemList.remove(position);
-                    notifyItemRemoved(position);  // Notify adapter
-                })
-                .setNegativeButton("Cancel", null)
-                .show();
+        try {
+            new AlertDialog.Builder(context)
+                    .setTitle("Delete Item")
+                    .setMessage("Are you sure you want to delete this item?")
+                    .setPositiveButton("Delete", (dialog, which) -> {
+                        deleteItem(item,position);  // Delete item from the database
+                        itemList.remove(position);
+                        notifyItemRemoved(position);  // Notify adapter
+                    })
+                    .setNegativeButton("Cancel", null)
+                    .show();
+        } catch (Exception e) {
+            notifyItemRemoved(position);  // Notify adapter
+
+        }
+
     }
 
     private void deleteItem(Item item, int position) {

@@ -4,7 +4,7 @@
     <string name="item_title">Item Title</string>
     <string name="item_title_">Item Title</string>
     <string name="item_description">Item Description</string>
-    <string name="enter_item_title">Enter item title</string>
+    <string name="enter_item_title">Type here</string>
     <string name="enter_item_description">Enter item description</string>
     <string name="select_image">Select Image</string>
     <string name="upload_item">Upload Item</string>

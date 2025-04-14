@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+       >
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/contactl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+
         <!-- App Logo -->
         <ImageView
-            android:id="@+id/app_icon_"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_launcher_foreground"
+            android:id="@+id/app_icon__"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:src="@drawable/icon_background"
             android:contentDescription="App Logo"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="60dp"/>
 
         <!-- App Name -->
         <TextView
@@ -36,6 +46,7 @@
             android:text="Version 1.0.0"
             android:textSize="16sp"
             android:textStyle="italic"
+            android:layout_marginBottom="80dp"
             android:paddingBottom="8dp"/>
 
         <!-- About the App -->
@@ -60,19 +71,95 @@
             android:layout_height="wrap_content"
             android:text="By using Zuula, you agree to our terms of service, ensuring responsible use and accuracy of provided information."
             android:textSize="14sp"
+            android:layout_marginBottom="50dp"
             android:paddingBottom="12dp"/>
-
         <!-- Contact Support -->
         <Button
             android:id="@+id/contactSupportButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contact Support"
+            android:textStyle="bold"
             android:textColor="@android:color/white"
-            android:background="@color/purple_500"
+            android:background="#923E5D"
             android:padding="10dp"
-            android:textSize="14sp"
+            android:textSize="21sp"
             android:layout_marginTop="10dp"/>
 
     </LinearLayout>
-</ScrollView>
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/imggg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+           android:layout_alignParentTop="true"
+            android:src="@drawable/icon_background"
+            android:layout_centerHorizontal="true"
+
+            android:contentDescription="App Logo"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+           android:layout_below="@id/imggg"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+         android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zuula - Lost &amp; Found"
+            android:textSize="23sp"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTACT OUR TEAM OF DEVELOPERS"
+            android:textSize="22sp"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="230dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contact"
+            />
+
+    </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

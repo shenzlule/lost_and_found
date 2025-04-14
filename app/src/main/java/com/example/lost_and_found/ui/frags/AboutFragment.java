@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -51,10 +53,12 @@ public class AboutFragment extends Fragment {
     private List<Item> itemList;
     private ItemAdapter adapter;
     private FirebaseFirestore db;
-    private Button myUploadsButton, uploadButton;
+    private Button myUploadsButton, uploadButton,contactSupportButton;
 
     private ImageView profileImageView;
 
+    private LinearLayout contactl1;
+    private RelativeLayout contact;
     private TextView noItem;
     private   ItemDao itemDao;
     private FirebaseAuth mAuth;
@@ -97,15 +101,21 @@ public class AboutFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =inflater.inflate(R.layout.fragment_about, container, false);
 
+        contactSupportButton= view.findViewById(R.id.contactSupportButton);
 
-        ImageView appIcon = view.findViewById(R.id.app_icon_);
+        contact=view.findViewById(R.id.contact);
+        contactl1=view.findViewById(R.id.contactl1);
 
-        // Load app icon with Glide
-        Glide.with(this)
-                .load(R.drawable.icon) // Replace with your actual app icon
-                .placeholder(R.drawable.icon) // Default image
-                .circleCrop() // Ensures the image is circular
-                .into(appIcon);
+        contact.setVisibility(GONE);
+        contactl1.setVisibility(VISIBLE);
+        contactSupportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contact.setVisibility(VISIBLE);
+                contactl1.setVisibility(GONE);
+            }
+        });
+
 
 
 
