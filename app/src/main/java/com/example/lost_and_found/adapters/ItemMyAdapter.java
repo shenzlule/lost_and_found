@@ -134,7 +134,7 @@ public class ItemMyAdapter extends RecyclerView.Adapter<ItemMyAdapter.ItemViewHo
                     .setTitle("Delete Item")
                     .setMessage("Are you sure you want to delete this item?")
                     .setPositiveButton("Delete", (dialog, which) -> {
-                        deleteItem(item,position);  // Delete item from the database
+                        deleteItem(item);  // Delete item from the database
                         itemList.remove(position);
                         notifyItemRemoved(position);  // Notify adapter
                     })
@@ -147,7 +147,7 @@ public class ItemMyAdapter extends RecyclerView.Adapter<ItemMyAdapter.ItemViewHo
 
     }
 
-    private void deleteItem(Item item, int position) {
+    private void deleteItem(Item item) {
         AppDatabase db = Room.databaseBuilder(context, AppDatabase.class, "app_database").build();
         ItemDao itemDao = db.itemDao();
 

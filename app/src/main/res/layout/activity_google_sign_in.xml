@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg2"
     tools:context=".GoogleSignInActivity"
     >
 <LinearLayout
@@ -33,7 +33,7 @@
         android:text="Zuula App"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginBottom="30dp"/>
 
     <TextView
@@ -43,7 +43,7 @@
         android:text="Find what's lost, fast."
         android:textSize="12sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_marginBottom="30dp"/>
 
     <!-- Fancy Google Sign-In Button -->
