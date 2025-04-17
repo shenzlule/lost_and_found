@@ -112,6 +112,8 @@
             />
 
         <LinearLayout
+            android:id="@+id/lasttext"
+
             android:layout_marginTop="100dp"
             android:layout_width="match_parent"
            android:layout_below="@id/imggg"
@@ -144,16 +146,137 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/itemImage"
-            android:layout_width="230dp"
-            android:layout_height="250dp"
-            android:layout_centerHorizontal="true"
 
-            android:layout_alignParentBottom="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/contact"
-            />
+        <LinearLayout
+            android:id="@+id/itemImage"
+            android:layout_marginTop="100dp"
+            android:layout_width="250dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:paddingHorizontal="50dp"
+            android:gravity="center"
+            android:background="@drawable/about_border"
+            android:layout_below="@+id/lasttext"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KATO JOSEPH"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEL: 070841371"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MATOVU ALEX"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TEL:0779037460"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NTEGE MARTIN"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TEL:0708646114"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OCAAYA ISAAC"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TEL:0758411061"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
     </RelativeLayout>
 
